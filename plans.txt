@@ -1,0 +1,4 @@
+Plan Name	Speed	Price	Image	Wifi Router	Power Adaptor	Mediacon	UTP Cable	Installation Fee
+Fiber Home P899	15Mbps	899	Low-plan.png	TL-WR840N	2	Non-Gigabit	1 meter	1999
+Fiber Home P1099	35Mbps	1099	Low-plan.png	TL-WR840N	2	Non-Gigabit	1 meter	1999
+Fiber Home P1499	60Mbps	1499	med-plan.png	TL-WR840N	2	Non-Gigabit	1 meter	1999

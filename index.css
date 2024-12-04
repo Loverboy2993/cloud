@@ -1,0 +1,163 @@
+/*Style for the index*/
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a;
+            /* background-image: url('web-page-bg.jpg'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+	    color: white;
+
+        }
+ 
+	nav ul li a {
+        text-decoration: none; /* Missing semicolon */
+        color: white; /* Add this to ensure text color is applied */
+        font-size: 18px;
+        padding: 0 15px;
+        text-transform: capitalize;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .icon-container {
+            display: flex; /* Use flexbox to place icons side by side */
+            align-items: center;
+        }
+
+        .globe-icon {
+            width: 150px;
+            height: 150px;
+            background-image: url('../../images/globe-icon.png'); /* Replace with your globe icon */
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 20px; /* Adds space between the globe and laptop icons */
+        }
+
+        .laptop-icon {
+            width: 400px; /* Adjusted size */
+            height: 300px;
+            background-image: url('../../images/laptop-icon.png'); /* Replace with your laptop icon */
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: brightness(0) invert(1); /* Change icon to white */
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            max-width: 400px;
+            margin: 20px 0;
+        }
+
+        .content button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .content button:hover {
+            background-color: white;
+            color: #0d1b2a;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5em;
+            }
+
+            .content p {
+                font-size: 1.1em;
+                max-width: 90%;
+            }
+
+            .globe-icon {
+                width: 120px;
+                height: 120px;
+            }
+	    .laptop-icon {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .content h1 {
+                font-size: 2em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+
+            .globe-icon {
+                width: 100px;
+                height: 100px;
+            }
+	    .laptop-icon {
+                width: 2000px;
+                height: 200px;
+            }
+
+            .icon-container {
+                flex-direction: column; /* Icons will stack vertically on small screens */
+            }
+        }
+
+	/* Footer styles */
+	footer {
+   	background-color: transparent;  /* Or any color you prefer */
+    	color: #fff;
+    	text-align: center;
+    	padding: 20px 0;
+	}
+
+	.footer-content p {
+    	margin: 0;
+    	font-size: 14px;
+	}

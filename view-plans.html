@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Offers</title>
+    <link rel="stylesheet" href="../HTML/styles/css/view-plans.css"> <!-- Link to external CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> <!-- CSV parser -->
+    <script src="js/view-plan.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+        	<img src='../HTML/images/plan/Logo.png' alt="Logo" class="logo"> <!-- Logo Image -->
+        	<h1>Plan Offers</h1>
+    	</div>
+        <p class="marquee"><span>Swipe left or right to browse through our exclusive plans and offers!</span></p>
+    </header>
+
+    <section class="plan-carousel">
+            <p>Promo will show here!</p>
+    	<!-- Dynamic plan cards will be inserted here by JavaScript -->
+    </section>
+
+        <footer>
+        	<p>&copy; 2024 Xavier Internet Solution.</p>
+        	<p>All rights reserved.</p>
+        	<p>You may contact us at <a href="javascript:void(0);" onclick="toggleContactInfo()">Click here!</a></p>
+    	</footer>
+
+    	<!-- Hidden Contact Info Section -->
+    	<section id="contact-info">
+        	<h2>Contact Information</h2>
+        	<p>Email: amj.29.8.22@gmail.com</p>
+        	<p>Phone: +63916 697 6922</p>
+        	<p>Address: Prk. Kulo, So. Talusan, Brgy. Bulanon, Sagay City, Negros Occidental</p>
+    	</section>
+
+   	<script>
+
+        function toggleContactInfo() {
+    var contactSection = document.getElementById("contact-info");
+    // Check if the display is "none" or empty, then show it; otherwise hide it
+    if (contactSection.style.display === "none" || contactSection.style.display === "") {
+        contactSection.style.display = "block"; // Show the contact info
+        contactSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to contact info
+        document.body.style.overflowY = "auto"; // Disable vertical scroll
+    } else {
+        contactSection.style.display = "none"; // Hide the contact info
+        document.body.style.overflowY = "hidden"; // Enable vertical scroll
+    }
+}
+
+
+    	</script>
+
+
+    <script>
+        // Swipe functionality
+        const carousel = document.querySelector('.plan-carousel');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('active');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 2; // Adjust scroll speed
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+</body>
+</html>

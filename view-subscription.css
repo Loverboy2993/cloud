@@ -1,0 +1,141 @@
+/* view-subscription page styling */
+html, body {
+    height: 100%; /* Ensure body takes full height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Set the body as a flexbox container */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header section */
+.header {
+    background: linear-gradient(to bottom, #87CEFA, #4682B4); /* Light blue to dark blue gradient */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for gradient text with shadow */
+.header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom, #87CEFA, #4682B4);
+    -webkit-background-clip: text;
+    color: #C8E6C9;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Styling */
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+/* Body section */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1; /* Allow the container to take up the remaining space */
+}
+
+/* Footer section */
+.footer {
+    background-color: #2f2f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Button style for payment */
+button {
+    background-color: #4382A1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Payment reminder styles */
+.reminder {
+    background-color: #ffcccc;
+    padding: 15px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Hover effects */
+a, button {
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Paid/Unpaid styles */
+.paid {
+    color: green;
+}
+
+.unpaid {
+    color: red;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3, p {
+        font-size: 1.1em;
+    }
+}

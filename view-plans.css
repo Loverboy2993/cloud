@@ -1,0 +1,215 @@
+/*This is for the View plans page*/
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a;
+            background-image: url('web-page-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+	    overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+	.header-content {
+    		display: flex; /* Use flexbox for alignment */
+    		align-items: center; /* Center items vertically */
+	}
+
+	.logo {
+    		width: 300px; /* Set a suitable width for the logo */
+    		height: auto; /* Maintain aspect ratio */
+    		margin-right: 15px; /* Space between logo and text */
+	}
+
+
+        header {
+            margin-bottom: 10px;
+        }
+
+	@keyframes colorChange {
+    		0% { color: white; }          /* Starting color - white */
+    		16.67% { color: #b2ff66; }    /* Light green */
+    		33.33% { color: #66ff33; }    /* Medium green */
+    		50% { color: #00cc00; }       /* Dark green */
+    		66.67% { color: #009900; }    /* Darker green */
+    		83.33% { color: #005700; }    /* Even darker green */
+    		100% { color: white; }        /* Back to starting color - white */
+	}
+
+        h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+            animation: colorChange 5s infinite; /* Apply the animation */
+	}
+
+	/* Marquee styles */
+        .marquee {
+            overflow: hidden; /* Hide overflow */
+            white-space: nowrap; /* Prevent line breaks */
+            box-sizing: border-box; /* Box model sizing */
+            margin: 10px 0; /* Space above and below */
+        }
+
+        .marquee span {
+            display: inline-block; /* Make the span behave like a block for positioning */
+            animation: marquee 10s linear infinite; /* Apply the animation */
+        }
+
+        /* Keyframes for the scrolling effect */
+        @keyframes marquee {
+            from {
+                transform: translateX(100%); /* Start from right outside the view */
+            }
+            to {
+                transform: translateX(-100%); /* Move to left outside the view */
+            }
+        }
+
+        .plan-carousel {
+            display: flex;
+            overflow-x: auto; /* Allows horizontal scrolling */
+            scroll-behavior: smooth; /* Smooth scrolling */
+            margin-top: 20px; /* Space between header and carousel */
+        }
+
+        .plan-carousel::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for cleaner UI */
+        }
+
+        .plan-card {
+            flex: 0 0 80%; /* Each plan takes 80% of the screen width */
+            max-width: 600px; /* Max width to prevent stretching */
+            background-color: rgba(10, 100, 225, 0.3);
+            margin: 0 10px; /* Adjust margins for spacing */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+	    color: Yellow;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 5px 0 5px 0;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .plan-details {
+            display: flex; /* Use flexbox to align image and inclusions */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .plan-image {
+            width: 100px; /* Set a fixed width for images */
+            height: auto; /* Maintain aspect ratio */
+	    margin-top: 20px;
+            margin-right: 15px; /* Space between the image and bullet points */
+            align-self: flex-start;/* Align image to the top */
+	}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 0; /* Remove left margin for the list */
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+	    color: white;
+        }
+
+        .plan-description {
+            display: block;
+            font-size: 0.85em;
+            color: #ddd;
+            margin-top: 5px;
+        }
+
+        .plan-inclusions {
+            font-size: 0.65em;
+            padding-left: 20px;
+            list-style-type: disc;
+            color: #ccc;
+        }
+
+        .plan-installation {
+            margin-top: 10px;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        .after-installation-text {
+            font-size: 0.75em;
+            color: #aaa;
+        }
+
+        .back-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .back-button:hover {
+            background-color: white;
+            color: #0d1b2a;
+        }
+
+        footer {
+            margin-top: 40px;
+            background-color: #0d1b2a;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+	
+	/* Initially hide contact info section */
+	#contact-info {
+            display: none;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+	}
+
+	/* Adjust font size for contact info */
+        #contact-info h2 {
+            font-size: 1.2em; /* Smaller font size for the heading */
+        }
+
+        #contact-info p {
+            font-size: 0.9em; /* Smaller font size for the paragraph */
+        }

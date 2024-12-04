@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subscription</title>
+    <link rel="stylesheet" href="C:\Users\CUSTOMER\Desktop\Fiber Home client\HTML\styles\css\view-subscription.css"> <!-- Link to external CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="C:\Users\CUSTOMER\Desktop\Fiber Home client\HTML\styles\js-script\view-subscription.js"></script>
+</head>
+
+<body>
+
+<!-- Header Section -->
+
+<div class="header">
+    <img src="C:\Users\CUSTOMER\Desktop\Fiber Home client\HTML\images\plan\Logo.png" alt="Company Logo" class="logo"> <!-- Add your logo image here -->
+    <h1>Xavier Internet Solution</h1>
+</div>
+
+
+<!-- Main Content Section -->
+<div class="container">
+        <h2>My Subscription details</h2>
+
+        <div id="client-details">
+            <h3>Name: <span id="client-name"></span></h3>
+            <p>Address: <span id="client-address"></span></p>
+            <p>Subscription Plan: <span id="client-plan"></span></p>
+            <p>Speed: <span id="client-speed"></span></p>
+            <p>Status: <span id="payment-status"></span></p>
+            <p id="due-date"></p>
+	    <p id="payment-notice" style="color: red; font-weight: bold;"></p> <!-- Payment notice will appear here -->
+        </div>
+
+        <div id="payment-reminder" class="reminder" style="display: none;">
+            Payment Reminder: Your subscription is unpaid. Please make the payment to avoid disconnection.
+        </div>
+
+         <!-- GCash Payment Button -->
+         <button style="display: none;" onclick="window.location.href='https://www.gcash.com';">Pay via GCash</button>
+
+	<!-- Billing Reminder (when not 1st of the month) -->
+	<div id="billing-reminder" class="reminder" style="display: none;"></div>    
+</div>		
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>All rights reserved!</p>
+        <p>Xavier Internet Services</p>
+    </div>
+
+</body>
+</html>
